@@ -1,0 +1,506 @@
+@charset "UTF-8";
+
+/* Add your custom styles here */
+
+/*=====Global=======*/
+body{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	background-color: #FAFAFA;
+	margin: 0;
+	padding: 0;	
+}
+.clearfix:after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+	.hideFigCaption{
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px,1px,1px,1px);
+}
+	
+
+
+
+/*=====Typography=======*/
+@font-face{
+	font-family: MadeSoulMaze_Regular;
+	src: url("../fonts/MadeSoulMaze_Regular.otf")
+}
+@font-face{
+	font-family: MadeSoulMaze_Outline;
+	src: url("../fonts/MadeSoulMaze_Outline.otf")
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Montserrat', sans-serif;
+}
+p {
+	margin-bottom: 20px;
+	line-height: 1.25;
+}
+
+/*=====keyframe=======*/
+@keyframes
+	heading-animation{
+		
+		0%{opacity: 0}	
+		20%{opacity: 1}
+}
+
+@keyframes
+border-animation{
+	0%{
+		border-bottom: solid 7px #FFA516 ;
+		width: 10%;
+		padding-bottom: 35px;
+	}
+100%{
+		border-bottom: solid 7px #FFA516 ;
+		width: 100%;
+	padding-bottom: 35px;
+	}
+}
+
+/*=====Structure=======*/
+
+#masthead{
+	background-color: #B0B0B0;
+	color: #101010;
+	margin: 0 auto;
+	padding: 40px 25px 15px 25px;
+	position: fixed;
+	z-index: 99;
+	width: 100%;
+	background: transparent;
+}
+#masthead.scrolled{
+	color: #ECECEC;
+	 background-color: #ffa516 !important;
+  transition: background-color 200ms linear;
+}
+#banner{
+width: 100%;
+	margin: 0 auto;
+}
+
+#portfolio{
+   width: 1200px;
+	margin: 0 auto;
+	padding: 25px;
+}
+#services{
+	margin: 0 auto;
+	padding: 20px;
+	width: 1200px
+}
+#footer{
+	height: 580px;
+	background-image: url("../images/footer_background.png");
+	background-size: cover;
+	padding: 25px;
+	color: #F2EDED;
+}
+
+
+/*=====Page Elements=======*/
+
+/*=====HEADER=======*/
+
+#masthead #logo{
+	float: left;
+}
+#masthead ul{
+	float: right;
+	padding-top: 20px;
+	padding-right: 25px;
+	
+
+	list-style: none;
+}
+#masthead ul li{
+	display: inline-block;
+	margin: 10px 15px 10px 0;
+	
+}
+#masthead ul li a{
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #EFE8E8;
+	font-weight: 600;
+	margin-right: 25px;
+	transition: all 0.15s ease;
+}
+#masthead ul li a:hover{
+	border-bottom: solid 4px #FFA516;
+	padding-top: 25px;
+	margin-top: 10px;
+	overflow: hidden;
+}
+#banner .flexslider{
+	margin: 0;
+	border: none;
+}
+
+#banner.flexslider ul,
+#banner.flexslider ul li
+{
+	margin: 0;
+	list-style: none;
+}
+#banner:hover.flexslider .flex-direction-nav .flex-direction-prev{
+	opacity: 1;
+	left: 10px;
+}
+#banner:hover.flexslider .flex-direction-nav .flex-direction-next{
+	opacity: 1;
+	right: 10px;
+}
+#banner h1{
+		font-family: MadeSoulMaze_Outline;
+	text-align: center;
+	font-size: 100px;
+	color: #FFA516;
+	font-weight: 600;
+	animation: heading-animation 25s;
+
+}
+#banner h2{
+		font-family: MadeSoulMaze_Regular;
+    text-align: center;
+	font-size: 100px;
+		color: #F0EEEE;
+animation: heading-animation 15s;
+
+}
+
+/*=====PORTFOLIO=======*/
+#portfolio h1{
+	font-size: 35px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 20px;
+	
+	margin-bottom: 30px;
+	padding: 20px;
+}
+
+
+
+#portfolioNav{
+	margin-top: 100px;
+	display: inline-block;
+	font-size: 25px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line-height: 2;
+	
+}
+
+#africa, #australia, #china, #india, #northAmerica{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 20px;
+}
+#portfolio .portfolionavigation{
+   width: 35%;
+	float: left;
+}
+#portfolio .countries{
+
+	float: right;
+	margin: 0 auto;
+}
+#portfolio .countries img{
+	position: relative;
+	z-index: 10;
+	filter: grayscale(1);
+	transition: all .30s ease;
+}
+#portfolio .countries img:hover{
+	transform: scale(1.1);
+	filter: grayscale(0);
+	
+}
+#portfolio .paraPortfolio{
+	
+	
+	
+}
+#portfolio .paraPortfolio::after{
+	content: '';
+	display: block;
+	animation: border-animation 40s ease;
+}
+#portfolioNav a{
+	cursor: pointer;
+	color:  #FFA516;
+	transition: 0.3s;
+	
+	
+}
+#portfolioNav a.inactive{
+	color: #666666;
+}
+#portfolioNav a:hover{
+	color: #BA3436;
+	font-size: 35px;
+}
+#heading{
+		height: 100%;
+
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 45%;
+}
+
+
+/*===============About&Services===============*/
+
+#about{
+	float: left;
+	width: 35%;
+	margin-bottom: 80px;
+	text-align: center;
+
+
+
+}
+#about ul{
+	list-style: square;
+	text-align: left;
+	
+}
+#about ul li{
+	margin-bottom: 15px;
+}
+#about h2{
+	font-family: 'Madesoulmaze', sans-serif;
+	font-size: 22px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 1px;
+	margin: 10px 0 20px 0;
+}
+#about h3{
+	font-size: 23px;
+	margin: 10px 0 10px 0;
+	line-height: 1.2;
+}
+
+.aboutJuly{
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+#about figure img{
+	margin-bottom: 25px;
+	border-radius: 300px;
+	margin-left: 10px;
+	
+}
+
+#about a{
+	display: inline-block;
+	cursor: pointer;
+	border: solid 3px #4B4A46;
+	padding: 10px;
+	border-radius: 10px;
+	text-transform: uppercase;
+	box-shadow: 0px 2px 20px 0px rgba(0,0,0,.06);
+	transition: all 0.25 ease;
+}
+
+#about a:hover{
+	color: #FFFFFF;
+	background-color: #FFA516;
+	border: solid 3px #FFA516;
+	box-shadow: 0px 2px 20px 0px rgba(0,0,0,.2);
+}
+
+
+#services h1{
+	font-size: 35px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	padding: 20px;
+}
+#serviceList{
+	float: right;
+	margin-right: 15px;
+	padding-right: 15px;
+	margin-bottom: 150px;
+
+}
+#servicePoints{
+	display: none;
+}
+
+#serviceList ul{
+	list-style: none;
+	margin-right: 200px;
+}
+#serviceList ul li{
+	display: block;
+	margin-bottom: 50px;
+	
+}
+#serviceList ul li a {
+	color: #212121;
+
+    font-size: 23px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	text-decoration: none;
+	transform: rotate(180deg);
+	
+}
+
+#serviceList figure{
+		width: 220px;
+	filter: grayscale(100%);
+	transition: all .3s ease;
+}
+#serviceList figure:hover{
+	filter: grayscale(0);
+}
+
+
+/*********Footer******/
+#footer h1{
+	font-size: 35px;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-top: 180px;
+	margin-left: 190px;
+	padding: 20px;
+}
+#footer h3{
+	margin-left: 120px;
+	width: 400px;
+	padding-left: 20px;
+	margin-bottom: 10px;
+}
+#footer #quote{
+	margin-top: 70px;
+	padding-top: 60px;
+}
+#contact{
+	margin-top: 50px;
+	padding: 25px;
+}
+a#quoteButton{
+	position: relative;
+	left: 8.3%;
+	
+	display: inline-block;
+	border: 3px solid #FFA516;
+    padding: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.25s ease;
+	margin: 15px;
+	margin-top: 20px;
+	text-transform: uppercase;
+}
+
+a#quoteButton:hover{
+	border: 3px solid #FFFFFF;
+	color: #FFA516;
+}
+#quoteInquiry{
+	display: none;
+	border-top-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	
+}
+
+.fancybox-slide--html .fancybox-close-small{
+	top: 10px;
+	right: 10px;
+}
+#quoteInquiry h2{
+	font-size: 32px;
+	margin-bottom: 15px;
+	font-weight: 800;
+}
+#quote label{
+	display: none;
+}
+#quote input, #quote select, #quote textarea{
+	display: block;
+	width: 100%;
+	padding: 15px;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+}
+#quote button{
+	
+	background-color: #FFA516;
+	border-radius: 15px;
+	padding: 15px;
+	border: none;
+	color: #FFFFFF;
+	transition: all 0.25s ease;
+}
+#quote button:hover{
+	
+	background-color: #2B2A2A;
+	
+}
+
+#socialMedia {
+	float: right;
+}
+#socialMedia  li{
+	display: inline-block;
+}
+#socialMedia li a{
+	font-size: 30px;
+	margin-left: 20px;
+	padding-left: 20px;
+	color: #FFFFFF;
+	transition: 0.3s;
+}
+#socialMedia li a:hover{
+	color: #939393;
+}
+
+#contactInfo{
+   float: left;
+  color: #EDEDED;
+	font-size: 16px;
+}
+#contactInfo li{
+	display: inline-block;
+	margin-top: 15px;
+}
+#contactInfo li a{
+	color: #EFEFEF;
+	margin-right: 25px;
+	text-decoration: none;
+	font-size: 17px;
+	transition-duration: 0.2s;
+}
+#contactInfo li a:hover{
+	border-bottom:  solid 2px #F7F7F7;
+}
+#footer .copyright{
+	font-size: 11px;
+	color: #9A9A9A;
+	border-top: 1px solid #3E3E3E;
+	padding: 15px 5px 5px 5px;
+	text-align: center;
+	margin: 35px 10px 10px 10px;;
+}
