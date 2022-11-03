@@ -1,0 +1,34 @@
+
+
+const scooter = {
+	
+	name: "Activa",
+	color: "Black",
+	type: "Mopad",
+	enginePower: "125cc",
+	scooterLength: {
+		width: 80,
+		height: 38,
+	},
+	discbrake: false,
+    togglediscbrake: function(braketype){
+		
+	this.discbrake = braketype;	
+	}
+	,
+	NewScooterLength: function(width, height) {
+		this.scooterLength.width = width;
+		this.scooterLength.height = height;
+	},
+	
+	
+};
+
+console.log("Honda Activa: ",scooter);
+console.log("Height before: ", scooter.scooterLength.height)
+scooter.NewScooterLength(83,42)
+console.log("Height after: ", scooter.scooterLength.height)
+
+console.log("Scooter's dimensions: ","width: ", scooter.scooterLength.width, "height: ",scooter.scooterLength.height)
+
+export default scooter;
